@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import MediaQuery from "react-responsive";
 
-import PC from "./pc/index.js";
+import PC from "./pc/router.js";
 import Mobile from "./mobile/index.js";
 class App extends React.Component{
 	render(){ 
