@@ -1,2 +1,2 @@
 # MeiMall
-仿小米商城
+使用React+antd 仿小米商城
