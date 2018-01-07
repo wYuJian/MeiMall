@@ -3,7 +3,7 @@ export default class PCIndex extends React.Component{
 	render(){
 		return(
 			<div>
-				pc
+				pc  
 			</div>
 		)
 	}
