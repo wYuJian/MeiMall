@@ -2,6 +2,9 @@ import React from "react";
 import pageData from "../../../../data/pagemain.json";
 import leftAds from "../../../../data/leftads.json";
 import HomeEelec from "./homeelec/index.js";
+import ReviewIndex from "./review/index.js";
+import Content from "./content/index.js";
+import VideoIndex from "./video/index.js";
 export default class HomeMain extends React.Component{
 	render(){
 		// console.log(pageData[0][0].titleData)
@@ -16,7 +19,9 @@ export default class HomeMain extends React.Component{
 						)
 					})
 				}
-				
+				<ReviewIndex />
+				<Content />
+				<VideoIndex />
 			</div>
 		)
 	}

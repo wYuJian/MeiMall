@@ -1,6 +1,12 @@
 import React from "react";
 import "../../../../../style/homemain/title.css";
 export default class Title extends React.Component{
+	constructor(){
+		super();
+		this.state  = {
+			index:0
+		}
+	}
 	render(){
 		return(
 			<div>
@@ -10,8 +16,9 @@ export default class Title extends React.Component{
 						<ul className="tab-list">
 							{
 								this.props.data.tab.map((item,index)=>{
+									var borderBottom = this.state.index == index ?"2px solid #ff6700":"2px solid white";
 									return(
-										<li key={index} onMouseOver={this.over.bind(this,index)}>{item}</li>
+										<li style={{borderBottom:borderBottom,cursor:"pointer"}} key={index} onMouseOver={this.over.bind(this,index)}>{item}</li>
 									)
 								})
 							}
@@ -22,6 +29,9 @@ export default class Title extends React.Component{
 		)
 	}
 	over(index){
-		console.log(index)
+		this.setState({
+			index:index
+		})
+		this.props.change(index);
 	}
 }

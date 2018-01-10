@@ -1,6 +1,7 @@
 import React from "react";
 import "../../../../../style/homehero/menu.css";
 import menuData from "../../../../../data/mimenu.json";
+import {Link } from "react-router-dom";
 import {Spin,Icon} from "antd";
 export default class Menu extends React.Component{
 	constructor(){
@@ -14,9 +15,12 @@ export default class Menu extends React.Component{
 		var menu = menuData.length?<ul style={{backgroundColor:"rgba(0,0,0,0.6)",
 		paddingTop:20,
 		paddingBottom:20}}>{menuData.map((item,index)=>{
+			var defaultActiveKey = "/list/"+(index+1);
 			return(
 				<li className="menu-item" key={index} onMouseOver={this.over.bind(this,index)}>
-					{item.title}<Icon type="right" />
+					<Link style={{
+						color:"white"
+					}} to={defaultActiveKey}>{item.title}<Icon type="right" /></Link>
 				</li>
 			)
 		})}</ul>:<Spin size="large" tip="Loading..." />;

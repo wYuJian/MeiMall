@@ -25,6 +25,7 @@
     "react-swiper": "^0.1.5",
     "style-loader": "^0.19.1",
     "swiper": "^4.0.7",
+    "webpack": "^3.10.0",
     "whatwg-fetch": "^2.0.3"
   }
 }

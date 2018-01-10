@@ -1,7 +1,7 @@
 import React from "react";
+import "../../../../../style/homemain/video.css";
 export default class RightItem extends React.Component{
 	render(){
-		console.log(this.props.itemsData)
 		var LiStyle = {
 			paddingTop:20,
 			width:232,
@@ -16,13 +16,14 @@ export default class RightItem extends React.Component{
 			flexDirection:"row",
 			flexWrap:"wrap"
 		}
+		// console.log(this.props.itemIndex)
 		var content = <ul className="itemUl">{
-					this.props.itemsData[0].map((item, index)=>{
+					this.props.itemsData[this.props.itemIndex].map((item, index)=>{
 						return (
-							<li key={index} className="itemLi" style={LiStyle}>
+							<li key={index} className="itemLi" style={LiStyle} className="videoItem">
 								<div style={{textAlign:"center"}} >
 									<img style={{width:150,height:150}} src={item.imgSrc} />
-									<p>{item.title}</p>
+									<p>{item.title}{this.props.itemIndex} </p>
 									<p style={{
 										color:"#b0b0b0",
 										fontSize:12
@@ -34,7 +35,9 @@ export default class RightItem extends React.Component{
 					})
 				}
 				</ul>
-		return(<div>{content}</div>)
+		return(<div>
+			{content}
+			</div>)
 	}
 
 }

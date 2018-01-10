@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../../../style/homemain/video.css";
 export default class LeftADS extends React.Component{
 	render(){
 		var ads ={
@@ -12,7 +13,7 @@ export default class LeftADS extends React.Component{
 			<div style={{width:w}}>{
 				this.props.ads.map((item,index)=>{
 					return(
-						<img key={index} style={{width:w,			
+						<img className="videoItem" key={index} style={{width:w,			
 							marginBottom:"10px"}} src={item}/>
 					)
 				})
