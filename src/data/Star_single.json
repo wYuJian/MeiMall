@@ -1,5 +1,6 @@
 [
     {
+        "id":"1",
         "boderColor":"#ffac13",
         "imgSrc":"http://i1.mifile.cn/a4/xmad_1496643954435_EcHtv.png",
         "title":"小米Max 2",
@@ -7,6 +8,7 @@
         "price":"1399元起"
     },
     {
+        "id":"2",
         "boderColor":"#83c44e",
         "imgSrc":"http://i1.mifile.cn/a4/xmad_1501854682644_cSqHx.png",
         "title":"小米5X",
@@ -14,6 +16,7 @@
         "price":"1499元"
     },
     {
+        "id":"1",
         "boderColor":"#2196f3",
         "imgSrc":"http://i1.mifile.cn/a4/xmad_15125569508853_uWAIK.png",
         "title":"红米5A",
@@ -21,6 +24,7 @@
         "price":"599元"
     },
     {
+        "id":"1",
         "boderColor":"#e53935",
         "imgSrc":"http://i1.mifile.cn/a4/848def18-47d9-4ca0-8822-c2ac61b83779",
         "title":"米家扫地机器人",
@@ -28,6 +32,7 @@
         "price":"1699元"
     },
     {
+        "id":"1",
         "boderColor":"#00c0a5",
         "imgSrc":"http://i1.mifile.cn/a4/de35852a-1be5-4ef5-846f-dcdd2efcfea6",
         "title":"小米路由器3",
@@ -35,6 +40,7 @@
         "price":"149元"
     },
     {
+        "id":"1",
         "boderColor":"#ffac13",
         "imgSrc":"http://i1.mifile.cn/a1/pms_1503909150.67293503!220x220.png",
         "title":"小米电视4A 43英寸 标准版",
@@ -42,6 +48,7 @@
         "price":"1999元"
     },
     {
+        "id":"1",
         "boderColor":"#83c44e",
         "imgSrc":"http://i1.mifile.cn/a4/725a37e3-78b7-4298-8098-c40097bf179d",
         "title":"小米笔记本",
@@ -49,6 +56,7 @@
         "price":"3599元起"
     },
     {
+        "id":"1",
         "boderColor":"#2196f3",
         "imgSrc":"http://i1.mifile.cn/a4/6ef55907-bbed-49be-a2bb-be0821b5f7b8",
         "title":"小米手环 2",
@@ -63,6 +71,7 @@
         "price":"149元"
     },
     {
+        "id":"1",
         "boderColor":"#00c0a5",
         "imgSrc":"http://i1.mifile.cn/a4/T1KvdjBX_v1RXrhCrK.jpg",
         "title":"小米净水器 厨下式",

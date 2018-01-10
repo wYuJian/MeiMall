@@ -1,6 +1,7 @@
 import React from "react";
 import "../../../../style/stargood/stargood.css";
 import starData from "../../../../data/Star_single.json";
+import {Link} from "react-router-dom";
 import {Button,Icon,Spin} from "antd";
 const ButtonGroup = Button.Group;
 export default class StarGoods extends React.Component{
@@ -13,11 +14,12 @@ export default class StarGoods extends React.Component{
 								width:234,
 								height:340,
 								marginRight:"14px"}
+						var url = "detail/"+item.id;
 						return(
 							<li key={index} className="rainbow-list-item" style={boderTop}>
-								<a>
+								<Link to={url}>
 									<img style={{width:160,height:160}} src={item.imgSrc} />
-								</a>
+								</Link>
 								<h3>
 									<a style={{color:"#212121"}}>{item.title}</a>
 								</h3>
