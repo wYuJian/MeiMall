@@ -6,6 +6,7 @@ import DetailLeft from "./detailLeft.js";
 import DetailRight from "./detailRight.js";
 import detailData from "../../../data/detail.json";
 import {Row,Col} from "antd"; 
+import SiteHeader from "../content/siteheader/index.js";
 export default class DetailIndex extends React.Component{
 	constructor(){
 		super();
@@ -14,17 +15,17 @@ export default class DetailIndex extends React.Component{
 		}
 	}
 	render(){
-		console.log(this.state.data)
 		return(
 			<div>
 				<Header />
 				<div className="container">
+					<SiteHeader />
 					<Row>
 						<Col span={9}>
-							<DetailLeft />
+							<DetailLeft data={this.state.data} />
 						</Col>
 						<Col span={11}>
-							<DetailRight />
+							<DetailRight data={this.state.data} />
 						</Col>
 					</Row>
 				</div>
@@ -33,14 +34,15 @@ export default class DetailIndex extends React.Component{
 		)
 	}
 	componentDidMount(){
-		// var data =[]
-		// detailData.map((item,index)=>{
-		// 	data = item.id == this.props.match.params.id ? item :[]
-		// 	if(data.length>0){
-		// 		this.setState({
-		// 			data:data
-		// 		})
-		// 	}
-		// })
+		var data =[]
+		detailData.map((item,index)=>{
+			if(item.id == this.props.match.params.id){
+				data.push(item);
+				this.setState({
+					data:data
+				})
+			}
+		})
+		
 	}
 }

@@ -1,13 +1,12 @@
 import React from "react";
-import {InputNumber,Icon} from "antd";
+import {InputNumber,Icon,Spin} from "antd";
 //商品详情右边模块
 export default class DetailRight extends React.Component{
 	render(){
-		return(
-			<div style={{marginTop:10,marginLeft:10}}>
-				<div>
-					<p className="title">【新品】OPPO R11S 2000万 全面屏拍照手机 oppor11s oppor11</p>
-					<p className="desc">Luck Dog生肖设计星幕新年版上市</p>
+		console.log(this.props.data);
+		var content = this.props.data.length ? <div>
+					<p className="title">{this.props.data[0].content.title}</p>
+					<p className="desc">{this.props.data[0].content.desc}</p>
 					<div className="tm-sale-prop">
 						<p className="tb-metatit">价格</p>
 						<div style={{
@@ -16,7 +15,7 @@ export default class DetailRight extends React.Component{
 							alignItems:"center"
 						}}>
 							<em className="tm-yen">¥</em>
-							<p className="price">2999.00</p>
+							<p className="price">{this.props.data[0].content.price}</p>
 						</div>
 					</div>
 					<div className="tm-sale-prop">
@@ -35,7 +34,7 @@ export default class DetailRight extends React.Component{
 							<span style={{
 								marginLeft:3,
 								color:"#FF0036"
-							}}>7407</span>
+							}}>{this.props.data[0].content.sales}</span>
 						</div>
 						<div style={{
 							display: "flex",
@@ -48,7 +47,7 @@ export default class DetailRight extends React.Component{
 							<span style={{
 								marginLeft:3,
 								color:"#FF0036"
-							}}>9801</span>
+							}}>{this.props.data[0].content.comment}</span>
 						</div>
 						<div style={{
 							display: "flex",
@@ -61,7 +60,7 @@ export default class DetailRight extends React.Component{
 							<span style={{
 								marginLeft:3,
 								color:"#280"
-							}}>299</span>
+							}}>{this.props.data[0].content.integral}</span>
 						</div>
 					</div>
 					<div className="tm-sale-prop">
@@ -72,58 +71,23 @@ export default class DetailRight extends React.Component{
 							alignItems:"center",
 							flexWrap:"wrap"
 						}}>
-							<li style={{
-								height:40,
-								border:"1px solid #b8b7bd",
-								boxSizing:"content-box",
-								marginLeft:5,
-								marginRight:5
-							}}>
-								<img src="https://img.alicdn.com/bao/uploaded/i1/901409638/TB2Y.d3ignH8KJjSspcXXb3QFXa_!!901409638.jpg_40x40q90.jpg" />
-								<span style={{
-									paddingLeft:9,
-									paddingRight:9
-								}}>星幕新年版</span>
-							</li>
-							<li style={{
-								height:40,
-								border:"1px solid #b8b7bd",
-								boxSizing:"content-box",
-								marginLeft:5,
-								marginRight:5
-							}}>
-								<img src="https://img.alicdn.com/bao/uploaded/i1/901409638/TB2Y.d3ignH8KJjSspcXXb3QFXa_!!901409638.jpg_40x40q90.jpg" />
-								<span style={{
-									paddingLeft:9,
-									paddingRight:9
-								}}>香槟色</span>
-							</li>
-							<li style={{
-								height:40,
-								border:"1px solid #b8b7bd",
-								boxSizing:"content-box",
-								marginLeft:5,
-								marginRight:5
-							}}>
-								<img src="https://img.alicdn.com/bao/uploaded/i1/901409638/TB2Y.d3ignH8KJjSspcXXb3QFXa_!!901409638.jpg_40x40q90.jpg" />
-								<span style={{
-									paddingLeft:9,
-									paddingRight:9
-								}}>黑色</span>
-							</li>
-							<li style={{
-								height:40,
-								border:"1px solid #b8b7bd",
-								boxSizing:"content-box",
-								marginLeft:5,
-								marginRight:5
-							}}>
-								<img src="https://img.alicdn.com/bao/uploaded/i1/901409638/TB2Y.d3ignH8KJjSspcXXb3QFXa_!!901409638.jpg_40x40q90.jpg" />
-								<span style={{
-									paddingLeft:9,
-									paddingRight:9
-								}}>红色</span>
-							</li>
+							{this.props.data[0].content.body_color.map((item,index)=>{
+								return(
+									<li style={{
+										height:40,
+										border:"1px solid #b8b7bd",
+										boxSizing:"content-box",
+										marginLeft:5,
+										marginRight:5
+									}}>
+										<img src={item.img_src} />
+										<span style={{
+											paddingLeft:9,
+											paddingRight:9
+										}}>{item.text} </span>
+									</li>
+								)
+							})}
 						</ul>
 					</div>
 					<div className="tm-sale-prop">
@@ -133,15 +97,19 @@ export default class DetailRight extends React.Component{
 							flexDirection:"row",
 							alignItems:"center"
 						}}>
-							<li style={{
-								height:32,
-								paddingTop:5,
-								paddingLeft:9,
-								paddingRight:9,
-								border:"1px solid #b8b7bd",
-								marginLeft:5,
-								marginRight:5
-							}}>官方标配</li>
+							{this.props.data[0].content.type.map((item,index)=>{
+								return(
+									<li style={{
+										height:32,
+										paddingTop:5,
+										paddingLeft:9,
+										paddingRight:9,
+										border:"1px solid #b8b7bd",
+										marginLeft:5,
+										marginRight:5
+									}}>{item}</li>
+								)
+							})}
 						</ul>
 					</div>
 					<div className="tm-sale-prop">
@@ -151,24 +119,19 @@ export default class DetailRight extends React.Component{
 							flexDirection:"row",
 							alignItems:"center"
 						}}>
-							<li style={{
-								height:32,
-								paddingTop:5,
-								paddingLeft:9,
-								paddingRight:9,
-								border:"1px solid #b8b7bd",
-								marginLeft:5,
-								marginRight:5
-							}}>64GB</li>
-							<li style={{
-								height:32,
-								paddingTop:5,
-								paddingLeft:9,
-								paddingRight:9,
-								border:"1px solid #b8b7bd",
-								marginLeft:5,
-								marginRight:5
-							}}>128GB</li>
+							{this.props.data[0].content.capacity.map((item,index)=>{
+								return(
+									<li style={{
+										height:32,
+										paddingTop:5,
+										paddingLeft:9,
+										paddingRight:9,
+										border:"1px solid #b8b7bd",
+										marginLeft:5,
+										marginRight:5
+									}}>64GB</li>
+								)
+							})}
 						</ul>
 					</div>
 					<div className="tm-sale-prop">
@@ -178,15 +141,19 @@ export default class DetailRight extends React.Component{
 							flexDirection:"row",
 							alignItems:"center"
 						}}>
-							<li style={{
-								height:32,
-								paddingTop:5,
-								paddingLeft:9,
-								paddingRight:9,
-								border:"1px solid #b8b7bd",
-								marginLeft:5,
-								marginRight:5
-							}}>中国大陆</li>
+							{this.props.data[0].content.version.map((item,index)=>{
+								return(
+									<li style={{
+									height:32,
+									paddingTop:5,
+									paddingLeft:9,
+									paddingRight:9,
+									border:"1px solid #b8b7bd",
+									marginLeft:5,
+									marginRight:5
+								}}>{item}</li>
+								)
+							})}
 						</ul>
 					</div>
 					<div className="tm-sale-prop">
@@ -237,9 +204,11 @@ export default class DetailRight extends React.Component{
 							}}>加入购物车</a>
 						</div>
 					</div>
-				</div>
+				</div>: <Spin tip="Loading..."></Spin>
+		return(
+			<div style={{marginTop:10,marginLeft:10}}>
+				{content}
 			</div>
 		)
 	}
-
 }
