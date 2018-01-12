@@ -34,7 +34,7 @@ export default class DetailIndex extends React.Component{
 		)
 	}
 	componentDidMount(){
-		var data =[]
+		var data =[];
 		detailData.map((item,index)=>{
 			if(item.id == this.props.match.params.id){
 				data.push(item);
