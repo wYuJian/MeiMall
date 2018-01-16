@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "antd": "^3.1.0",
+    "antd-mobile": "^2.1.3",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -22,6 +23,7 @@
     "react-dom": "^16.2.0",
     "react-responsive": "^4.0.3",
     "react-router-dom": "^4.2.2",
+    "react-svg": "^2.2.10",
     "react-swiper": "^0.1.5",
     "style-loader": "^0.19.1",
     "swiper": "^4.0.7",

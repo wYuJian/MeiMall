@@ -73,7 +73,7 @@ export default class DetailRight extends React.Component{
 						}}>
 							{this.props.data[0].content.body_color.map((item,index)=>{
 								return(
-									<li style={{
+									<li key={index} style={{
 										height:40,
 										border:"1px solid #b8b7bd",
 										boxSizing:"content-box",

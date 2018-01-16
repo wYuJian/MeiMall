@@ -1,0 +1,43 @@
+.am-tab-bar{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+.am-tabs-tab-bar-wrap .am-tab-bar-bar{
+	display: flex;
+  	flex-direction: row;
+  	justify-content:space-around;
+  	align-items:center;
+}
+.am-tabs-tab-bar-wrap .am-tab-bar-bar .am-tab-bar-tab{
+	
+}
+.am-tab-bar-tab-title{
+	text-align: center;
+	font-size: 1.25rem;
+}
+/*.index-tab-icon{
+	background:url(../../../images/moblie/n-index.svg) center center /  0.42rem 0.42rem no-repeat;
+}
+.index-tab-selected-icon{
+	background:url(../../../images/moblie/a-index.svg) center center /  0.42rem 0.42rem no-repeat;
+}
+.fenlei-tab-icon{
+	background:url(../../../images/moblie/n-fenlei.svg) center center /  0.42rem 0.42rem no-repeat;
+}
+.fenlei-tab-selected-icon{
+	background:url(../../../images/moblie/a-fenlei.svg) center center /  0.42rem 0.42rem no-repeat;
+}
+.cart-tab-icon{
+	background:url(../../../images/moblie/n-care.svg) center center /  0.42rem 0.42rem no-repeat;
+}
+.cart-tab-selected-icon{
+	background:url(../../../images/moblie/a-cart.svg) center center /  0.42rem 0.42rem no-repeat;
+}
+.user-tab-icon{
+	background:url(../../../images/moblie/n-user.svg) center center /  0.42rem 0.42rem no-repeat;
+}
+.user-tab-selected-icon{
+	background:url(../../../images/moblie/a-user.svg) center center /  0.42rem 0.42rem no-repeat;
+}*/
