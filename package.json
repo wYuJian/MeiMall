@@ -25,6 +25,7 @@
     "react-router-dom": "^4.2.2",
     "react-svg": "^2.2.10",
     "react-swiper": "^0.1.5",
+    "redux": "^4.0.0",
     "style-loader": "^0.19.1",
     "swiper": "^4.0.7",
     "webpack": "^3.10.0",
